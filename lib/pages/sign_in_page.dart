@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/divider.dart';
+import '../widgets/image_signin_button.dart';
 import '../widgets/login_filed.dart';
+import '../widgets/submit_button.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
@@ -61,16 +64,65 @@ class _SignInPageState extends State<SignInPage> {
 
               // Forgot Password
               Padding(
-                padding: const EdgeInsets.only(left: 252, top: 10),
-                child: InkWell(
-                  onTap: () {},
+                padding: const EdgeInsets.only(
+                  left: 250,
+                ),
+                child: TextButton(
+                  onPressed: () {},
                   child: const Text(
                     "Forgot Password?",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
-              ), 
-              
+              ),
+
+              // Submit Button
+              const SubmitButton(),
+
+              const SizedBox(
+                height: 10,
+              ),
+
+              // Divider
+              const DividerText(),
+
+              // SignIn Icons
+              Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    ImageSignInButton(
+                      imgLocation: "assets/images/google.png",
+                    ),
+                    SizedBox(
+                      width: 30,
+                    ),
+                    ImageSignInButton(
+                      imgLocation: "assets/images/apple.png",
+                    ),
+                  ],
+                ),
+              ),
+
+              const SizedBox(
+                height: 10,
+              ),
+              // Footer Text
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text("Not a member?"),
+                  TextButton(
+                    style: TextButton.styleFrom(),
+                    onPressed: () {},
+                    child: Text(
+                      "Register now",
+                      style: TextStyle(color: Colors.brown.shade500),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
