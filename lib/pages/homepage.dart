@@ -23,6 +23,11 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.brown.shade200,
+        elevation: 0,
+      ),
+      drawer: const Drawer(),
       body: _pages[_pageIndex],
       bottomNavigationBar: GoogleNavBar(
         onTabChange: (value) {

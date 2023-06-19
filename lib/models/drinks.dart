@@ -1,7 +1,5 @@
-import 'package:flutter/material.dart';
-
-class Drinks {
-  const Drinks({
+class Drink {
+  const Drink({
     required this.name,
     required this.price,
     required this.imgLocation,
