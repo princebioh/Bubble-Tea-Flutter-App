@@ -1,4 +1,5 @@
 import 'package:bubble_tea_ui/pages/sign_in_page.dart';
+import 'package:bubble_tea_ui/themes/themes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,8 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: SignInPage(),
+    return MaterialApp(
+      home: const SignInPage(),
+      theme: lightTheme,
     );
   }
 }
