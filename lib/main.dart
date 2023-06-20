@@ -1,5 +1,4 @@
 import 'package:bubble_tea_ui/models/shop.dart';
-import 'package:bubble_tea_ui/pages/homepage.dart';
 import 'package:bubble_tea_ui/pages/sign_in_page.dart';
 import 'package:bubble_tea_ui/themes/themes.dart';
 import 'package:flutter/material.dart';

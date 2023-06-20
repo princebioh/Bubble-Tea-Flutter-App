@@ -28,7 +28,7 @@ class Shop extends ChangeNotifier {
   List<Drink> get drinks => _drinks;
 
   // List of drinks in User's Cart
-  List<Drink> _userCart = [];
+  final List<Drink> _userCart = [];
   List get userCart => _userCart;
 
   // Add Drink to Cart

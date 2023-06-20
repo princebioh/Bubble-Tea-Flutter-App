@@ -1,6 +1,7 @@
 import 'package:bubble_tea_ui/pages/cart_page.dart';
 import 'package:bubble_tea_ui/pages/shop_page.dart';
 import 'package:bubble_tea_ui/widgets/bottom_nav.dart';
+import 'package:bubble_tea_ui/widgets/drawer_nav.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -27,7 +28,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.brown.shade200,
         elevation: 0,
       ),
-      drawer: const Drawer(),
+      drawer: const DrawerNav(),
       body: _pages[_pageIndex],
       bottomNavigationBar: GoogleNavBar(
         onTabChange: (value) {
