@@ -19,6 +19,11 @@ class Shop extends ChangeNotifier {
       price: "\$120",
       imgLocation: "assets/images/bubble-tea.png",
     ),
+    const Drink(
+      name: "Malt",
+      price: "\$150",
+      imgLocation: "assets/images/bubble-tea.png",
+    ),
   ];
   List<Drink> get drinks => _drinks;
 

@@ -1,3 +1,4 @@
+import 'package:bubble_tea_ui/pages/homepage.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/divider.dart';
@@ -77,7 +78,17 @@ class _SignInPageState extends State<SignInPage> {
               ),
 
               // Submit Button
-              const SubmitButton(),
+              SubmitButton(
+                text: "Sign In",
+                onPress: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomePage(),
+                    ),
+                  );
+                },
+              ),
 
               const SizedBox(
                 height: 10,

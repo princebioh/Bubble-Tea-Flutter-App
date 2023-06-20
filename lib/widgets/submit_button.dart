@@ -3,7 +3,11 @@ import 'package:flutter/material.dart';
 class SubmitButton extends StatelessWidget {
   const SubmitButton({
     super.key,
+    required this.text,
+    required this.onPress,
   });
+  final String text;
+  final void Function() onPress;
 
   @override
   Widget build(BuildContext context) {
@@ -12,13 +16,13 @@ class SubmitButton extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(10),
         child: MaterialButton(
-          onPressed: () {},
+          onPressed: onPress,
           color: Colors.brown.shade500,
           minWidth: 400,
           height: 70,
-          child: const Text(
-            "Sign In",
-            style: TextStyle(fontSize: 25, color: Colors.white),
+          child: Text(
+            text,
+            style: const TextStyle(fontSize: 25, color: Colors.white),
           ),
         ),
       ),
